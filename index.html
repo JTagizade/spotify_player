@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/55fe2e26b2.js" crossorigin="anonymous"></script>​
+    <script src="https://cdn.tailwindcss.com">        
+    </script>
+</head>  
+<body class="bg-gray-600">
+    <div class="w-[1720px] h-[112px] bg-[#181818] flex items-center justify-between">
+        <div class="flex pl-5 my-5 items-center w-[300px]">
+            <img src="/img/0.jpeg" alt="mj" class="size-[70px]" id="img">
+            <div class="flex flex-col mx-5 my-3">
+                <p class="text-white text-[18px]" id="title">Baby be mine</p>
+                <p class="text-[#B3B3B3] text-[15px]" id="artist">Michael Jackson</p>
+            </div>
+            <div class="heart"></div>
+        </div>
+        <div class="flex flex-col gap-3">
+            <div class="flex items-center justify-center gap-6">
+                <i class="fa-solid fa-backward-step text-[25px] cursor-pointer text-[#c4c4c4] hover:text-white" id="prev"></i>
+                <i class="fa-solid fa-circle-play text-[40px] cursor-pointer text-[#c4c4c4] hover:text-white" id="play"></i>
+                <i class="fa-solid fa-forward-step text-[25px] cursor-pointer text-[#c4c4c4] hover:text-white" id="next"></i>
+            </div>
+            <div class="flex items-center gap-3">
+                <p class="text-[14px] text-[#c4c4c4]" id="current-time">2:11</p>
+                <div class="bg-[#535353] w-[600px] h-[5px] rounded-[3px] cursor-pointer" id="progress-bar">
+                    <div class="bg-[#c4c4c4] absolute h-[5px] rounded-[3px] cursor-pointer" id="progress"></div>
+                </div>
+                    <p class="text-[14px] text-[#c4c4c4]" id="duration">2:55</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-[10px] mx-10">
+            <i class="fa-solid fa-volume-high" style="color: #b3b3b3;"></i>
+            <div class="bg-[#535353] w-[120px] h-[5px] rounded-[3px] cursor-pointer"></div>
+        </div>    
+    </div>
+    <audio src="/audio/baby-be-mine.mp3" id="song"></audio>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+    
