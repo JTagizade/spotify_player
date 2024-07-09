@@ -48,3 +48,21 @@
 #progress-bar:hover #progress{
 	background-color: green;
 }
+
+
+#volume-bar:hover #volume::after {
+	content: "";
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: -2.5px;
+	margin-right: -2.5px;
+}
+
+#volume-bar:hover #volume{
+	background-color: green;
+}

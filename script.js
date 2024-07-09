@@ -12,6 +12,9 @@ const artist = document.getElementById('artist');
 const progressBar = document.getElementById('progress-bar');
 const progress = document.getElementById('progress');
 
+const volumeBar = document.getElementById('volume-bar');
+const volumeEl = document.getElementById('volume');
+
 
 const curTime = document.getElementById('current-time');
 const songDuration = document.getElementById('duration');
@@ -102,15 +105,19 @@ const displaySong = () => {
     title.textContent = `${playList[songIndex].title}`;
 };
 
-// progressBar.addEventListener("click", function(event) {
-//     let { offsetX } = event;
-//     // const { width } = this.getBoundingClientRect();
-//     console.log(offsetX)
+progressBar.addEventListener("click", function(event) {
+    let { offsetX: clicked } = event;
+    let { width } = progressBar.getBoundingClientRect()
+    song.currentTime = (clicked / width) * song.duration;
+});
 
-//     song.currentTime = offsetX;
-//     offsetX = 0;
+volumeBar.addEventListener("click", function(event) {
+    let { offsetX: clicked } = event;
+    let { width } = volumeBar.getBoundingClientRect()
+    song.volume = (clicked / width);
+    volumeEl.style.width = width * song.volume + "px";
+});
 
-// });
 
 
 
